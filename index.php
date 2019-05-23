@@ -10,9 +10,9 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Projekt na przedmiot strony WWW">
 	<meta name="keywords" content="HTML, CSS, JS,jquery-3, PHP">
-	<meta name="Mrozowski_Szymon" content="I rok Informatyki KUL">
+	<meta name="author" content="Szymon Mrozowski">
+	<meta name="description" content="Projekt na Aplikacje internetowe">
 	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet"/>
 	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif" rel="stylesheet"/>
 	<link rel="stylesheet" href="Style/style.css">

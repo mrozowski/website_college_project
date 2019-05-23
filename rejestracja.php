@@ -180,9 +180,9 @@
 	<meta charset="UTF-8" />
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Form">
 	<meta name="keywords" content="HTML, CSS, JS,jquery-3, PHP">
-	<meta name="author" content="I rok Informatyki KUL">
+	<meta name="author" content="Szymon Mrozowski">
+	<meta name="description" content="Projekt Zaliczeniowy">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet"/>
 	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif" rel="stylesheet"/>
@@ -259,31 +259,31 @@ EXCERPT;
 				<ul>	
 
 					
-					<li><span>Nick</span><input type="text" class="input_k"  name="nick" value="<?php
+					<li><input type="text" class="input_k"  name="nick" placeholder="Nick" value="<?php
 					 	if (isset($_SESSION['fr_nick'])) { echo $_SESSION['fr_nick']; unset($_SESSION['fr_nick']); }
-				    ?>" required></li>			
+				    ?>" required> <span class="reg_bar"></span></li>			
 		        				
-					<?php	if(isset($_SESSION['e_nick'])) echo "<p class='error_'>".$_SESSION['e_nick']."</p>";?>
+					<?php	if(isset($_SESSION['e_nick'])){ echo "<p class='error_'>".$_SESSION['e_nick']."</p>";  unset($_SESSION['e_nick']);}?>
 
-					<li><span>Imie</span><input type="text" class="input_k" name="imie" required value="<?php
+					<li><input type="text" class="input_k" name="imie"  placeholder="Imie" required value="<?php
 					 	if (isset($_SESSION['fr_imie'])) { echo $_SESSION['fr_imie']; unset($_SESSION['fr_imie']); }
-				    ?>"></li>	
-					<?php	if(isset($_SESSION['e_imie'])) echo "<p class='error_'>".$_SESSION['e_imie']."</p>";?>
+				    ?>"><span class="reg_bar"></span></li>	
+					<?php	if(isset($_SESSION['e_imie'])){ echo "<p class='error_'>".$_SESSION['e_imie']."</p>"; unset($_SESSION['e_imie']);}?>
 
-					<li><span>Naziwsko</span><input type="text" class="input_k" name="nazwisko" required value="<?php
+					<li><input type="text" class="input_k" name="nazwisko"  placeholder="Nazwisko" required value="<?php
 					 	if (isset($_SESSION['fr_nazwisko'])) { echo $_SESSION['fr_nazwisko']; unset($_SESSION['fr_nazwisko']); }
-				    ?>"></li>	
-					<?php	if(isset($_SESSION['e_nazwisko'])) echo "<p class='error_'>".$_SESSION['e_nazwisko']."</p>";?>
+				    ?>"><span class="reg_bar"></span></li>	
+					<?php	if(isset($_SESSION['e_nazwisko'])){ echo "<p class='error_'>".$_SESSION['e_nazwisko']."</p>"; unset($_SESSION['e_nazwisko']);}?>
 
-					<li><span>E-mail</span><input type="text" class="input_k" name="email" required value="<?php
+					<li><input type="text" class="input_k" name="email"  placeholder="E-mail" required value="<?php
 					 	if (isset($_SESSION['fr_email'])) { echo $_SESSION['fr_email']; unset($_SESSION['fr_email']); }
-				    ?>"></li>
-					<?php	if(isset($_SESSION['e_email'])) echo "<p class='error_'>".$_SESSION['e_email']."</p>";?>
+				    ?>"><span class="reg_bar"></span></li>
+					<?php	if(isset($_SESSION['e_email'])){ echo "<p class='error_'>".$_SESSION['e_email']."</p>"; unset($_SESSION['e_email']);}?>
 
-					<li><span>Hasło</span><input type="password" class="input_k" name="haslo1" required></li>
-					<?php	if(isset($_SESSION['e_haslo'])) echo "<p class='error_'>".$_SESSION['e_haslo']."</p>";	 ?>
+					<li><input type="password" class="input_k" name="haslo1"  placeholder="Hasło" required> <span class="reg_bar"></span></li>
+					<?php	if(isset($_SESSION['e_haslo'])){ echo "<p class='error_'>".$_SESSION['e_haslo']."</p>";	 unset($_SESSION['e_haslo']);}?>
 
-					<li><span>Powtórz hasło</span><input type="password" class="input_k" name="haslo2" required></li>
+					<li><input type="password" class="input_k"  placeholder="Powtórz hasło" name="haslo2" required><span class="reg_bar"></span></li>
 
 					<li><label>
 						<input type="checkbox" name="regulamin" <?php
@@ -297,8 +297,9 @@ EXCERPT;
 					<?php	if(isset($_SESSION['e_regulamin'])){ echo "<p class='error_'>".$_SESSION['e_regulamin']."</p>";
 					unset($_SESSION['e_regulamin']);} ?>
 					<li><div class="g-recaptcha" data-sitekey="6LeUHKQUAAAAALff-FmD6DhyNzyGpCRfNdFyge4-"></div></li>
-					<?php	if(isset($_SESSION['e_captcha'])) echo "<p class='error_'>".$_SESSION['e_captcha']."</p>";
-						?>
+					<?php	if(isset($_SESSION['e_captcha'])){ echo "<p class='error_'>".$_SESSION['e_captcha']."</p>"; 
+						unset($_SESSION['e_captcha']);}
+					?>
 
 					<input class="wyslij_rej" type="submit" value="Załóż konto">
 					

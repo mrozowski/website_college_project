@@ -136,7 +136,6 @@ outline: none;
 }
 
 
-
 #profil_wys  input:focus ~.bar::before{
 	width: 220px;
 }

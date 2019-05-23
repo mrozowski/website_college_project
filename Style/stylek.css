@@ -11,7 +11,7 @@
 	min-width: 100%;
 	justify-content: center;
 	text-align: center;
-
+	
 	padding-top: 20px;
 	font-size: 30px;
 }
@@ -20,7 +20,8 @@
 }
 .m_kontakt ul{
 	list-style: none;
-    min-width: 100%;
+	width: 31rem;
+	margin: auto;
 }
 .m_kontakt textarea{
 	resize: none;
@@ -37,16 +38,15 @@
 }
 .m_kontakt ul li{
 	margin-top: 20px
+	
 }
-
+.m_kontakt input{
+	text-align: center;
+}
 .m_kontakt ul li:last-of-type{
 	margin-bottom: 20px
 }
-.input_k{
-	width: 98%;
-	height: 35px;
-	font-size: 25px
-}
+
 
 #tresc{
 	width: 100%;
@@ -80,10 +80,51 @@ footer{
 	grid-row: 2/span 1;
 	font-size: 20px;
 }
-
-.rejestracja li {
+.rejestracja input, .rejestracja li{
 	text-align: left;
 }
+
+
+ .input_k {
+	background: none;
+	display: block;
+	padding: 10px 10px 10px 5px;
+	
+	height: 35px;
+	font-size: 20px;
+	width: 31rem;
+	border: none;
+	border-radius: 0;
+	border-bottom: 1px solid black;
+	transition: 300ms ease all;
+}
+
+.input_k:focus {
+	outline: none;
+	font-size: 25px;
+}
+
+.input_k:focus ~.reg_bar::before{
+	width: 500px;
+}
+
+.reg_bar {
+	position: relative;
+	display: block;
+	
+}
+
+.reg_bar:before {
+	content: '';
+	height: 2px;
+	width: 0;
+	bottom: 0px;
+	position: absolute;
+	background: green;
+	transition: 500ms ease all;
+	left: 0%;
+	}
+
 
 .error_{
 	color: rgb(235, 52, 20);

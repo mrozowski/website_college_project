@@ -13,7 +13,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="Sport">
 	<meta name="keywords" content="HTML, CSS, JS,jquery-3, PHP">
-	<meta name="author" content="I rok Informatyki KUL">
+	<meta name="author" content="Szymon Mrozowski">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
 	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet"/>
 	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Serif" rel="stylesheet"/>
