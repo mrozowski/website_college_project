@@ -1,0 +1,239 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+
+.contener{
+    display: grid;
+    grid-template-columns: 11.5em auto;
+    grid-template-rows: 102vh auto;
+    overflow: hidden;
+    
+}
+
+header{
+    grid-column: 1/3;
+    grid-row: 1/2;
+    background: linear-gradient(0deg, rgb(139, 135, 134, 1) 0%,rgb(139, 135, 134, 0.8) 1%, rgba(139, 135, 134, 0) 2.5%),
+     url("Pictures/home1.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.tytul{
+    margin-top: 1em;
+    text-align: center;
+    font-size: 5em;
+    border-bottom: 0.5rem solid black;
+}
+
+.spis{
+   min-height: 30vh;
+   padding: 1em 0 0 18vw;
+   line-height: 2em;
+   background: -webkit-linear-gradient(2em);
+   background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
+}
+
+.spis ul{
+    margin:0;
+    color: white;
+    
+}
+
+.spis ul li a{
+    color: white;
+    text-shadow: 2px 2px 4px #000000;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+ /* Glowne */
+
+ /* side bar */
+.side_nav{
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+nav{
+    position: absolute;
+    top: 100vh;
+    width: 11.5em;
+    height: 100vh;
+    background-color: rgb(9, 13, 19);
+    
+}
+
+nav ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    
+}
+
+nav ul li{
+    
+    border-bottom: 0.3rem solid white;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 6em;
+    text-align: right;
+    padding: 0 0.5em;
+    
+    background-color: rgb(9, 13, 19);
+}
+
+nav ul li a:last-of-type(){
+    border: none;
+}
+
+nav ul li a span{
+    width: 8.75em;
+}
+
+ /***** main text ******/
+
+.main_text{
+    font-size: 2em;
+}
+.main_text section{
+    padding: 0 3em 1em 3em;
+    min-width: 350px;
+    border-bottom: 1rem solid black
+}
+
+
+h1{
+    text-align:center;
+    margin-top: 0;
+    padding-top:2.5rem;
+}
+
+#przedmowa{
+   
+}
+p{
+    
+    text-indent: 3em;
+    text-align: justify;
+}
+
+#Kassar{
+    border: none;
+}
+.obraz{
+    background: linear-gradient(0deg, rgb(117, 146, 176) 0%, rgba(117, 146, 176, 0.8) 3%, rgba(117, 146, 176, 0) 6%),
+     url("Pictures/castle.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 105vh;
+    border: none;
+}
+
+.Zamek{
+    background: linear-gradient(180deg, rgb(117, 146, 176) 0%, rgba(117, 146, 176, 0.7) 10%, rgba(117, 146, 176, 0) 25%,
+    rgba(255, 255, 255, 0) 20% ,rgba(0,0,0,0.2)90%,rgba(0,0,0,0.8)98.5%, rgba(0,0,0,1)100%),   url("Pictures/wall.jpg");
+    background-position: center;
+    background-size: contain;
+    background-blend-mode: darken;
+    
+}
+
+.Zamek div{
+    background: linear-gradient(0deg, rgba(241, 248, 255, 0)3%, rgba(183, 220, 255, 0.1)5%,  rgba(183, 220, 255, 0.5)15%, rgba(183, 220, 255, 0.4) 85%, rgba(183, 220, 255, 0) 95%);
+   
+    border-radius: 1em 0;
+    padding: 1em;
+}
+.wstep{
+    background: linear-gradient(rgb(139, 135, 134) 0%, rgba(194, 192, 192, 0) 10%);
+}
+
+.Opetany{
+    
+    background: linear-gradient(180deg, rgba(0,0,0,1)0.2%, rgba(0,0,0,0)0.5%), url("Pictures/backg.png");
+    background-position: center;
+    background-size: contain;
+   color: white;
+}
+.Opetany h1{
+    color: transparent;
+    color: black;
+   text-shadow: 0 0 32px rgb(0, 0, 0);
+}
+img{
+    width: 8em;
+    border-radius: 1em 0;
+}
+.LeftPicture{
+    float: left;
+    margin-right: 1em;
+   
+}
+
+.RightPicture{
+    float: right;
+    margin-left: 1em;
+    margin-bottom: 1em;
+    width: 10em;
+}
+
+/* animacje *****************************************/
+
+.animsLeft{
+	opacity: 0;
+	transition: all 666ms linear;
+	transform: translate3d(-100px, 0px, 0px);
+}
+
+.animsRight{
+	opacity: 0;
+	transition: all 666ms linear;
+	transform: translate3d(100px, 0px, 0px);
+}
+
+.in-view{
+	opacity: 1;
+	transform: translate3d(0px, 0px, 0px);
+}
+
+
+
+@media screen and (max-width: 750px){
+
+.contener{overflow: unset;}
+#nmenu{
+    visibility: hidden;
+}
+
+.main_text{
+    grid-column: 1/span 2;
+}
+
+.main_text section{
+    padding: 0.2rem 1rem;
+    font-size: 1.4rem;
+}
+
+.animsLeft{
+	opacity: 1;
+	transition: none;
+	transform: none;
+}
+
+.animsRight{
+	opacity: 1;
+	transition: none;
+	transform: none;;
+}
+
+}

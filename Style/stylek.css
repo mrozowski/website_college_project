@@ -1,0 +1,116 @@
+#contener{
+	display: grid;
+	grid-template-rows: 4em auto 4em;
+}
+
+.m_kontakt{
+	min-height: 100%;
+	grid-column: 1/ span 4;
+	grid-row: 2/span 1;
+	display: flex;
+	min-width: 100%;
+	justify-content: center;
+	text-align: center;
+
+	padding-top: 20px;
+	font-size: 30px;
+}
+.m_kontakt h3{
+	background-color: rgba(0,0,0,0.5);
+}
+.m_kontakt ul{
+	list-style: none;
+    min-width: 100%;
+}
+.m_kontakt textarea{
+	resize: none;
+}
+
+#g_send{
+	font-size: 25px;
+	width: 50%;
+	background-color: #3498db;
+  	border-color: #3498da;
+  	border-radius: 28px;
+  	color: white;
+  	
+}
+.m_kontakt ul li{
+	margin-top: 20px
+}
+
+.m_kontakt ul li:last-of-type{
+	margin-bottom: 20px
+}
+.input_k{
+	width: 98%;
+	height: 35px;
+	font-size: 25px
+}
+
+#tresc{
+	width: 100%;
+	height: 200px;
+	font-size: 25px;
+}
+
+
+
+#wiadomosc{
+	grid-column: 1/ span 4;
+	font-size: 25px;
+	text-align: center;
+	padding-top: 20px;
+}
+
+#wiadomosc div p{
+	margin-top: 20px;
+}
+#wiadomosc a{
+	color: green;
+
+}
+
+footer{
+	grid-column: 1/ span 4;
+	grid-row: 3/span 1;
+}
+
+.rejestracja{
+	grid-row: 2/span 1;
+	font-size: 20px;
+}
+
+.rejestracja li {
+	text-align: left;
+}
+
+.error_{
+	color: rgb(235, 52, 20);
+	font-size: 1rem;
+	text-align: center;	
+
+}
+
+
+	
+	
+
+.wyslij_rej{
+	background-color: #171717;
+	border-radius: 0.2em;
+	color: white;
+	padding: 0.2rem;
+	font-size: 1.5rem;
+	
+}
+@media screen and (min-width: 650px){
+
+
+.m_kontakt h3{
+	width: 600px;
+	margin-bottom: 25px;
+}
+
+
+}
