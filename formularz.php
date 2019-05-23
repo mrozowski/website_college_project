@@ -13,10 +13,6 @@
 	
 	$ok = true;
 
-	if(!$email || !$temat || !$tresc){
-		
-		$ok = false;
-	}
 
 	$emailB = filter_var($email, FILTER_SANITIZE_EMAIL);
 	if ((filter_var($emailB, FILTER_VALIDATE_EMAIL)==false) || ($emailB!=$email)){
@@ -24,6 +20,11 @@
 		$_SESSION['er_email'] = true;
 	}
 
+	if((strlen($tresc)<3) || (strlen($tresc)>500) || (strlen($temat)<1) || (strlen($temat)>50))
+	{
+		$ok = false;
+		$_SESSION['e_form'] = '<span style="color:rgb(235, 52, 20);">Wprowadz poprawne dane! </span>';
+	} 
 	if(!$ok){
 		//Zapamiętaj wprowadzone dane
 		$_SESSION['fr_temat'] = $temat;
@@ -32,6 +33,31 @@
 
 		header('Location: kontakt.php');
 	} 
+
+	//Jeżeli wszystko jest dobrze to logujemy się do bazy
+
+	require_once "connect.php";
+	try{
+		$polaczenie = new mysqli($host, $db_user, $db_password, $db_name);
+			if ($polaczenie->connect_errno!=0)
+			{
+				throw new Exception(mysqli_connect_errno());
+			}
+			else{
+				
+				$date = date('Y-m-d H:i:s a', time());
+					if(!$polaczenie->query("INSERT INTO message_ VALUES (
+						NULL, '$email', '$temat', '$tresc','$date')")){
+							$ok = false;
+							throw new Exception($polaczenie->error);
+						}
+				$polaczenie->close();
+			}
+	}
+	catch(Exception $e){
+		echo '<span style="color:rgb(235, 52, 20);">Błąd serwera! Przepraszamy za niedogodności i prosimy o wysłanie wiadomości w innym terminie!</span>';
+		echo '<br />Informacja developerska: '.$e;
+	}
 ?>
 
 <!DOCTYPE html>
@@ -119,7 +145,7 @@ EXCERPT;
 			echo "<p><a href='index.php'>Wróc na strone główną</a></p>";
 		}
 		else {
-		echo "Wypełnij wszystkie dane";
+		echo "Nie udało się wysłać wiadomości";
 		echo "<p><a href='kontakt.php'>Cofnij</a></p>";
     	}
 		?>

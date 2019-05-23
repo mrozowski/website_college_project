@@ -32,7 +32,7 @@ header{
    min-height: 30vh;
    padding: 1em 0 0 18vw;
    line-height: 2em;
-   background: -webkit-linear-gradient(2em);
+  
    background: linear-gradient(180deg, rgba(0,0,0,1) 0%, rgba(255,255,255,0) 100%);
 }
 
@@ -91,7 +91,7 @@ nav ul li a{
     background-color: rgb(9, 13, 19);
 }
 
-nav ul li a:last-of-type(){
+nav ul li a:last-of-type{
     border: none;
 }
 
@@ -117,9 +117,7 @@ h1{
     padding-top:2.5rem;
 }
 
-#przedmowa{
-   
-}
+
 p{
     
     text-indent: 3em;
@@ -210,9 +208,13 @@ img{
 
 @media screen and (max-width: 750px){
 
-.contener{overflow: unset;}
+    
 #nmenu{
     visibility: hidden;
+}
+
+.main_text section{
+    min-width: unset;
 }
 
 .main_text{

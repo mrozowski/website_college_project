@@ -18,24 +18,18 @@
 .m_kontakt h3{
 	background-color: rgba(0,0,0,0.5);
 }
+
+
 .m_kontakt ul{
 	list-style: none;
-	width: 31rem;
+	width: 100%;
 	margin: auto;
 }
 .m_kontakt textarea{
 	resize: none;
 }
 
-#g_send{
-	font-size: 25px;
-	width: 50%;
-	background-color: #3498db;
-  	border-color: #3498da;
-  	border-radius: 28px;
-  	color: white;
-  	
-}
+
 .m_kontakt ul li{
 	margin-top: 20px
 	
@@ -89,10 +83,9 @@ footer{
 	background: none;
 	display: block;
 	padding: 10px 10px 10px 5px;
-	
-	height: 35px;
+	height: 40px;
 	font-size: 20px;
-	width: 31rem;
+	width: 100%;
 	border: none;
 	border-radius: 0;
 	border-bottom: 1px solid black;
@@ -100,31 +93,8 @@ footer{
 }
 
 .input_k:focus {
-	outline: none;
-	font-size: 25px;
+	outline: none;	
 }
-
-.input_k:focus ~.reg_bar::before{
-	width: 500px;
-}
-
-.reg_bar {
-	position: relative;
-	display: block;
-	
-}
-
-.reg_bar:before {
-	content: '';
-	height: 2px;
-	width: 0;
-	bottom: 0px;
-	position: absolute;
-	background: green;
-	transition: 500ms ease all;
-	left: 0%;
-	}
-
 
 .error_{
 	color: rgb(235, 52, 20);
@@ -137,21 +107,52 @@ footer{
 	
 	
 
-.wyslij_rej{
-	background-color: #171717;
-	border-radius: 0.2em;
+.wyslij_rej, .g_send{
 	color: white;
-	padding: 0.2rem;
+	padding: 0.3rem 0.5rem;
 	font-size: 1.5rem;
-	
+	background: rgb(52, 152, 219);
+ 	border-radius: 5px;
+ 	height: 40px;
 }
 @media screen and (min-width: 650px){
 
 
-.m_kontakt h3{
-	width: 600px;
-	margin-bottom: 25px;
+
+.input_k{
+	width: 31rem;
+	
 }
+
+.m_kontakt ul{
+	width: 31rem;
+}
+
+.input_k:focus {
+	font-size: 25px;	
+}
+
+
+.input_k:focus ~.reg_bar::before{
+	width: 31rem;
+}
+
+.reg_bar {
+	position: relative;
+	display: block;
+	margin-bottom: 2rem;
+}
+
+.reg_bar:before {
+	content: '';
+	height: 2px;
+	width: 0;
+	bottom: 0px;
+	position: absolute;
+	background: rgb(52, 152, 219);
+	transition: 500ms ease all;
+	left: 0%;
+	}
 
 
 }

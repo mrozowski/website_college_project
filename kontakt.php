@@ -101,13 +101,12 @@ EXCERPT;
 					 	if (isset($_SESSION['fr_temat'])) { echo $_SESSION['fr_temat']; unset($_SESSION['fr_temat']); }
 				    ?>"> </li>							
 				<li>Treść</li>
-				<li><textarea id="tresc" name="tresc" required><?php
-					 	if (isset($_SESSION['fr_tresc'])) { echo $_SESSION['fr_tresc']; unset($_SESSION['fr_tresc']); }
-					?>
-				</textarea></li>			    
-				<li><input type="submit" id="g_send" value="Wyślij"></li>
+				<li><textarea id="tresc" name="tresc" required><?php if (isset($_SESSION['fr_tresc'])) { echo $_SESSION['fr_tresc']; unset($_SESSION['fr_tresc']); }?></textarea></li>			    
+				<li><input type="submit" class="g_send" value="Wyślij"></li>
+				<li><?php if(isset($_SESSION['e_form'])){ echo $_SESSION['e_form']; unset($_SESSION['e_form']); }?></li>
 			</ul>
 			</form>
+			
 		</section>
 	<footer>
 		<nav>
