@@ -123,7 +123,7 @@ $(window).resize(function () {
 
 
 
-
+     //animacje elementow przy scrollowaniu
 
      var $anims = $('.anims');
      var $window = $(window);
@@ -139,7 +139,7 @@ $(window).resize(function () {
          var element_top_position = $element.offset().top;
          var element_bottom_position = (element_top_position + element_height);
       
-         //check to see if this current container is within viewport
+         //sprawdz czy ten element jest widoczny
          if ((element_bottom_position >= window_top_position) &&
              (element_top_position <= window_bottom_position)) {
            $element.addClass('in-view');
