@@ -23,14 +23,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
     function sprawdz(){
-             if(n==3) {  
-                 i=n;
-                 n=0;
-            }
-            else {
-                n++;
-                i=n-1;
-            }
+             n++;
+             i = n-1;
+             n=n%tImg.length;
+             i=i%tImg.length;
     }
 
      function autom_text(){  //zmiana tekstu
