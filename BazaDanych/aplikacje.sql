@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 23 Maj 2019, 12:40
+-- Czas generowania: 23 Maj 2019, 14:59
 -- Wersja serwera: 10.1.26-MariaDB
 -- Wersja PHP: 7.1.9
 
@@ -42,12 +42,7 @@ CREATE TABLE `uzytkownicy` (
 --
 
 INSERT INTO `uzytkownicy` (`id`, `user`, `pass`, `imie`, `nazwisko`, `email`) VALUES
-(1, 'adam', '$2y$10$sxDq/vdjmPfBvBdq/BtgAuFZKjy1k8uApOacm/LyxUC3Qjs8EJdkG', 'Adam', 'Pstrąg', 'adam@gmail.com'),
-(12, 'Jogurt', '$2y$10$qWojc6ky9uHpOMtkD1UIRu6Oo3M7NraY5CEqZncL4pBgyqlg5XCt2', 'Ferdek', 'Wapniak', 'Mokak@op.pl'),
-(11, 'Acer', '$2y$10$kA4eya3QWw8C47zaVn5/9uyx6e6380YJw6PftZKsRYNJ2YQPR4r.m', 'Janusz', 'Oaza', 'Oaza@gmail.com'),
-(2, 'Admin', '$2y$10$w14B9zso7klCy/VY6h2Mj.p6G32qD2oLbO5imVBy5mAWcF6a7EYLe', 'Admin', 'Root', 'admin@gmail.com'),
-(13, 'Backspace', '$2y$10$WsemGbLv3TUKfT41Smcm/uCV46oRUQ7DKxSERL.ppy8pJF6outavq', 'Mirek', 'Ford', 'zero@one.com'),
-(14, '12312', '$2y$10$TsjUk4ip0wt6Oi3Id/8x7OWTd0t.xBuONwnH6XXQkkP91y2GlC0wa', '12312', '3123', '12312@fff.kj');
+(2, 'Admin', '$2y$10$w14B9zso7klCy/VY6h2Mj.p6G32qD2oLbO5imVBy5mAWcF6a7EYLe', 'Admin', 'Root', 'admin@gmail.com');
 
 --
 -- Indeksy dla zrzutów tabel
