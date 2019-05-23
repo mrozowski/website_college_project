@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 23 Maj 2019, 14:59
+-- Czas generowania: 24 Maj 2019, 00:11
 -- Wersja serwera: 10.1.26-MariaDB
 -- Wersja PHP: 7.1.9
 
@@ -21,6 +21,27 @@ SET time_zone = "+00:00";
 --
 -- Baza danych: `aplikacje`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Struktura tabeli dla tabeli `message_`
+--
+
+CREATE TABLE `message_` (
+  `id` int(11) NOT NULL,
+  `email` text CHARACTER SET utf8 COLLATE utf8_polish_ci,
+  `temat` text CHARACTER SET utf8 COLLATE utf8_polish_ci,
+  `tresc` text CHARACTER SET utf8 COLLATE utf8_polish_ci,
+  `data_wyslania` datetime DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Zrzut danych tabeli `message_`
+--
+
+INSERT INTO `message_` (`id`, `email`, `temat`, `tresc`, `data_wyslania`) VALUES
+(22, 'example@example.com', 'Testowanie', 'przykÅ‚adowy tekst', '2019-05-24 00:10:53');
 
 -- --------------------------------------------------------
 
@@ -49,6 +70,12 @@ INSERT INTO `uzytkownicy` (`id`, `user`, `pass`, `imie`, `nazwisko`, `email`) VA
 --
 
 --
+-- Indexes for table `message_`
+--
+ALTER TABLE `message_`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `uzytkownicy`
 --
 ALTER TABLE `uzytkownicy`
@@ -58,6 +85,12 @@ ALTER TABLE `uzytkownicy`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT dla tabeli `message_`
+--
+ALTER TABLE `message_`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
 
 --
 -- AUTO_INCREMENT dla tabeli `uzytkownicy`
