@@ -333,7 +333,13 @@ EXCERPT;
 				</nav>
 			</div>
 			<div id="ankieta2">
-				<form action="#" method="post">
+				<?php
+				if((isset($_SESSION['ankieta'])) && ($_SESSION['ankieta']==true)){
+					echo 'Dziękujemy za wypełnienie ankiety.';
+				}
+				else{
+echo <<<EXCERPT
+				<form  action="ankieta.php" method="post" id="form_ankieta">
 					<h4>Ankieta</h4>
 					
 					<p id="ank1">Ile masz lat?</p>
@@ -356,7 +362,10 @@ EXCERPT;
 					<label><input type="checkbox" name="temat" value="Biznes">Biznes</label><br>
 
 					<input id="a_sub" type="button"  value="Wyślij">
-			    </form>
+					</form>
+EXCERPT;
+				}
+				?>
 			    <div id="error_ank"></div>
 			</div>
 			<div>

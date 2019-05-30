@@ -97,7 +97,7 @@ $(window).resize(function () {
      		if(this.checked==true) $isWiek = true;
      		if(!$isWiek) $("#ank1").css("color", "#EB3414");   			
      		else $("#ank1").css("color", "#CCC"); 
-     	});
+     	}); 
      	
      	$("input[name=plec]").each(function(){
      		if(this.checked==true) $isPlec = true;
@@ -112,11 +112,15 @@ $(window).resize(function () {
      	});
      	
         if($isWiek && $isPlec && $isTemat){
-       		 $('#ankieta2').html("Dziękujemy za wypełnienie ankiety.");
+                $('#form_ankieta').submit();
+                $('#ankieta2').html("Dziękujemy za wypełnienie ankiety.");
+               
         }
         else{
         	 $('#error_ank').html("Prosze wypełnić zaznaczone pola");
-        	 $('#error_ank').css("transform", "translateX(0)");
+             $('#error_ank').css("transform", "translateX(0)");
+            
+             
         }
    
      })

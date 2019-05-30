@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Czas generowania: 24 Maj 2019, 00:11
+-- Czas generowania: 30 Maj 2019, 18:40
 -- Wersja serwera: 10.1.26-MariaDB
 -- Wersja PHP: 7.1.9
 
@@ -46,6 +46,26 @@ INSERT INTO `message_` (`id`, `email`, `temat`, `tresc`, `data_wyslania`) VALUES
 -- --------------------------------------------------------
 
 --
+-- Struktura tabeli dla tabeli `survey`
+--
+
+CREATE TABLE `survey` (
+  `id` int(11) NOT NULL,
+  `wiek` text COLLATE utf8_unicode_ci,
+  `plec` varchar(1) CHARACTER SET utf8 COLLATE utf8_polish_ci DEFAULT NULL,
+  `tematy` text CHARACTER SET utf8 COLLATE utf8_polish_ci
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+--
+-- Zrzut danych tabeli `survey`
+--
+
+INSERT INTO `survey` (`id`, `wiek`, `plec`, `tematy`) VALUES
+(1, '18-25', 'M', 'Muzyka');
+
+-- --------------------------------------------------------
+
+--
 -- Struktura tabeli dla tabeli `uzytkownicy`
 --
 
@@ -76,6 +96,12 @@ ALTER TABLE `message_`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `survey`
+--
+ALTER TABLE `survey`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `uzytkownicy`
 --
 ALTER TABLE `uzytkownicy`
@@ -91,6 +117,12 @@ ALTER TABLE `uzytkownicy`
 --
 ALTER TABLE `message_`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- AUTO_INCREMENT dla tabeli `survey`
+--
+ALTER TABLE `survey`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT dla tabeli `uzytkownicy`
