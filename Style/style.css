@@ -10,7 +10,6 @@
 	display: grid;
 	grid-template-columns: repeat(4, auto);
 	grid-template-rows: 4em 92vh 66px auto 4em;
-	
 }
 
 /* */

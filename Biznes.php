@@ -34,7 +34,7 @@
 		<ul id="menu_wys">
 			<li><a href="index.php">Strona główna</a></li>
 			<li><a href="http://www.kul.pl/">KUL</a></li>
-			<li><a href="https://allegro.pl/">Sklep</a></li>
+			<li><a href="game/index.php">Game</a></li>
 			<li><a href="Rekopis/index.html">Rękopis</a></li>
 			<li><a href="kontakt.php">Kontakt</a></li>
 			<li><a href="#">Ustawienia</a></li>
@@ -44,7 +44,7 @@
 				<li class="butt"><a href="http://www.kul.pl/">KUL</a></li>
 		        <li class="butt"><a href="Rekopis/index.html">Rękopis</a></li>
 				<li class="logo"><a href="#top"> </a></li>
-				<li class="butt"><a href="https://allegro.pl/">Sklep</a></li>
+				<li class="butt"><a href="game/index.php">Game</a></li>
 		        <li class="butt"><a href="kontakt.php">Kontakt</a></li>
 			</ul>
 		</nav>
